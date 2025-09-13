@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase", "--project-ref", "yfwxexefflejdohohtjk"],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "sbp_ce01c081acecb6195242b57f1d160469469b6684",
+        "DEBUG": "*"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@executeautomation/playwright-mcp-server"],
+      "env": {
+        "PLAYWRIGHT_BROWSERS_PATH": "0",
+        "PLAYWRIGHT_HEADLESS": "1",
+        "DEBUG": "mcp:*"
+      }
+    },
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "--connection", "postgresql://postgres:password@db.yfwxexefflejdohohtjk.supabase.co:5432/postgres"],
+      "env": {
+        "PGPASSWORD": "your-db-password"
+      }
+    }
+  }
+}
